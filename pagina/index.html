@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyerStudio | Diseños Únicos</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+
+    <!-- Botón flotante de Modo Oscuro / Claro -->4
+    <button id="btn-theme" class="btn-theme" onclick="toggleTheme()" title="Cambiar modo claro/oscuro">🌙</button>
+
+    <!-- Menú / Header -->
+    <header>
+        <div class="brand">
+            <img src="flyerstudio logo.png" alt="Logo FlyerStudio" class="logo-img">
+            <div class="logo-texto">Flyer<span>Studio</span></div>
+        </div>
+        
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Categorías</a>
+            <a href="#portafolio">Galería</a>
+            <a href="#precios">Precios</a>
+            <a href="#faq">FAQ</a>
+            <a href="#proceso">¿Cómo trabajamos?</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección Hero con Estrellitas Animadas -->
+    <section id="inicio" class="hero">
+        <div class="estrellas-fondo">
+            <span class="estrella e1">✦</span>
+            <span class="estrella e2">✧</span>
+            <span class="estrella e3">✦</span>
+            <span class="estrella e4">✧</span>
+            <span class="estrella e5">✦</span>
+        </div>
+        
+        <div class="hero-content">
+            <h1>Flyers que capturan momentos y conectan ideas</h1>
+            <p>Diseños personalizados para efemérides, cumpleaños inolvidables y los eventos más importantes.</p>
+            <a href="#contacto" class="btn-principal">Pedir mi Flyer ✦</a>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="servicios" class="seccion-servicios">
+        <h2 class="titulo-seccion">¿Qué Diseñamos?</h2>
+        <div class="grid-servicios">
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">📅</div>
+                <h3>Fechas Especiales</h3>
+                <p>Flyers creativos e informativos para días mundiales, efemérides escolares o conmemoraciones.</p>
+            </div>
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">🎂</div>
+                <h3>Cumpleaños e Invitaciones</h3>
+                <p>Diseños coloridos, temáticos y divertidos para invitaciones digitales o impresas.</p>
+            </div>
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">🎤</div>
+                <h3>Eventos y Fiestas</h3>
+                <p>Estética llamativa y profesional para promocionar festivales, conciertos o fiestas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería con Visor Ampliado (Lightbox) -->
+    <section id="portafolio" class="seccion-portafolio">
+        <h2 class="titulo-seccion">Trabajos Realizados</h2>
+        <p class="subtitulo">Toca cualquier imagen para verla en tamaño completo:</p>
+        
+        <div class="galeria-grid">
+            <div class="item-galeria" onclick="abrirModal('cumpletadeo.png.png', 'Invitación Infantil - Cumpleaños')">
+                <div class="imagen-contenedor">
+                    <img src="cumpletadeo.png.png" alt="Cumpleaños Tadeo" class="imagen-galeria">
+                    <div class="zoom-overlay"><span>Ver detalle ✦</span></div>
+                </div>
+                <div class="info-galeria">
+                    <h4>Invitación Infantil</h4>
+                    <p>Categoría: Cumpleaños</p>
+                </div>
+            </div>
+
+            <div class="item-galeria" onclick="abrirModal('abejasdia.png.png', 'Día Mundial de las Abejas')">
+                <div class="imagen-contenedor">
+                    <img src="abejasdia.png.png" alt="Día Mundial de las Abejas" class="imagen-galeria">
+                    <div class="zoom-overlay"><span>Ver detalle ✦</span></div>
+                </div>
+                <div class="info-galeria">
+                    <h4>Efemérides / Medioambiente</h4>
+                    <p>Categoría: Fechas Especiales</p>
+                </div>
+            </div>
+
+            <div class="item-galeria" onclick="abrirModal('diversidadbiologica.png.png', 'Día de la Diversidad Biológica')">
+                <div class="imagen-contenedor">
+                    <img src="diversidadbiologica.png.png" alt="Día de la Diversidad Biológica" class="imagen-galeria">
+                    <div class="zoom-overlay"><span>Ver detalle ✦</span></div>
+                </div>
+                <div class="info-galeria">
+                    <h4>Efemérides / Ciencia</h4>
+                    <p>Categoría: Fechas Especiales</p>
+                </div>
+            </div>
+
+            <div class="item-galeria" onclick="abrirModal('birthdaygirl.png.png', 'Tarjeta Birthday Girl')">
+                <div class="imagen-contenedor">
+                    <img src="birthdaygirl.png.png" alt="Tarjeta Birthday Girl" class="imagen-galeria">
+                    <div class="zoom-overlay"><span>Ver detalle ✦</span></div>
+                </div>
+                <div class="info-galeria">
+                    <h4>Diseño Aesthetic / Eventos</h4>
+                    <p>Categoría: Cumpleaños</p>
+                </div>
+            </div>
+
+            <div class="item-galeria" onclick="abrirModal('txt drama definitivo png.png', 'Flyer Promocional TXT')">
+                <div class="imagen-contenedor">
+                    <img src="txt drama definitivo png.png" alt="Flyer Promocional TXT" class="imagen-galeria">
+                    <div class="zoom-overlay"><span>Ver detalle ✦</span></div>
+                </div>
+                <div class="info-galeria">
+                    <h4>Flyer Promocional</h4>
+                    <p>Categoría: Eventos y Promociones</p>
+                </div>
+            </div>
+             <div class="item-galeria" onclick="abrirModal('Poster LISTA NARANJA.png', 'Flyer Promocional Lista Naranja')">
+                <div class="imagen-contenedor">
+                    <img src="Poster LISTA NARANJA.png" alt="Flyer Promocional Lista Naranja" class="imagen-galeria">
+                    <div class="zoom-overlay"><span>Ver detalle ✦</span></div>
+                </div>
+                <div class="info-galeria">
+                    <h4>Flyer Promocional</h4>
+                    <p>Categoría: Eventos y Promociones</p>
+                </div>
+            </div>
+            <div class="item-galeria" onclick="abrirModal('parte trasera skz.png', 'Flyer Promocional SKZ')">
+                <div class="imagen-contenedor">
+                    <img src="parte trasera skz.png" alt="Flyer Promocional SKZ" class="imagen-galeria">
+                    <div class="zoom-overlay"><span>Ver detalle ✦</span></div>
+                </div>
+                <div class="info-galeria">
+                    <h4>Flyer Promocional</h4>
+                    <p>Categoría: Eventos y Promociones</p>
+                </div>
+            </div>
+            <div class="item-galeria" onclick="abrirModal('Happy Birthday Coquette.png', 'Tarjeta Birthday Coquette')">
+                <div class="imagen-contenedor">
+                    <img src="Happy Birthday Coquette.png" alt="Tarjeta Birthday Coquette" class="imagen-galeria">
+                    <div class="zoom-overlay"><span>Ver detalle ✦</span></div>
+                </div>
+                <div class="info-galeria">
+                    <h4>Diseño Aesthetic / Eventos</h4>
+                    <p>Categoría: Cumpleaños</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Ventana Modal Lightbox -->
+    <div id="modal-imagen" class="modal-visor" onclick="cerrarModal()">
+        <span class="cerrar-modal">&times;</span>
+        <img id="img-modal" class="contenido-modal-img" alt="Vista previa">
+        <div id="caption-modal" class="caption-modal"></div>
+    </div>
+
+    <!-- Planes Simplificados -->
+    <section id="precios" class="seccion-precios">
+        <h2 class="titulo-seccion">Planes y Precios</h2>
+        <p class="subtitulo">Elegí el plan perfecto para tu proyecto:</p>
+        
+        <div class="cards-precios-grid">
+            <div class="card-plan">
+                <h3>Básico</h3>
+                <p class="plan-subtitle">Ideal para Redes Sociales</p>
+                <div class="precio-card">$ 4.000</div>
+                <ul class="lista-plan">
+                    <li>✓ 1 Flyer en Alta Calidad</li>
+                    <li>✓ Formato para Redes (Story o Feed)</li>
+                    <li>✓ Entrega rápida</li>
+                </ul>
+                <a href="#contacto" class="btn-plan" onclick="seleccionarPlan('Plan Básico ($4.000)', 4000)">Elegir Básico ✦</a>
+            </div>
+
+            <div class="card-plan recomendado">
+                <div class="badge-recomendado">Más Pedido ⭐</div>
+                <h3>Completo</h3>
+                <p class="plan-subtitle">Cumpleaños y Fiestas</p>
+                <div class="precio-card">$ 6.500</div>
+                <ul class="lista-plan">
+                    <li>✓ Flyer Digital + Archivo para Imprimir</li>
+                    <li>✓ Adaptado a tu temática</li>
+                    <li>✓ Incluye 2 revisiones gratis</li>
+                </ul>
+                <a href="#contacto" class="btn-plan principal" onclick="seleccionarPlan('Plan Completo ($6.500)', 6500)">Elegir Completo ✦</a>
+            </div>
+
+            <div class="card-plan">
+                <h3>Premium</h3>
+                <p class="plan-subtitle">Eventos y Grandes Proyectos</p>
+                <div class="precio-card">$ 11.000</div>
+                <ul class="lista-plan">
+                    <li>✓ 3 Propuestas iniciales</li>
+                    <li>✓ Formatos para Feed + Historia</li>
+                    <li>✓ Archivo Editable original</li>
+                </ul>
+                <a href="#contacto" class="btn-plan" onclick="seleccionarPlan('Plan Premium ($11.000)', 11000)">Elegir Premium ✦</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="seccion-faq">
+        <h2 class="titulo-seccion">Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary>¿Cuánto demora la entrega del flyer?</summary>
+                <p>De 24 a 48 horas hábiles una vez confirmado el pedido y recibidos los datos.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Qué pasa si quiero corregir algo?</summary>
+                <p>Hacemos los ajustes necesarios para que el diseño quede exactamente como te gusta.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Cómo me entregan el archivo?</summary>
+                <p>En imagen HD (PNG/JPG) optimizada para WhatsApp y redes, o PDF listo para imprimir.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Proceso -->
+    <section id="proceso">
+        <h2 class="titulo-seccion">¿Cómo trabajamos?</h2>
+        <div class="grid-servicios">
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">1️⃣</div>
+                <h3>Elegí tu Plan</h3>
+                <p>Elegís la opción que mejor se adapte a lo que buscás.</p>
+            </div>
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">2️⃣</div>
+                <h3>Envianos los Datos</h3>
+                <p>Nos pasás las fotos, textos y temáticas mediante el formulario.</p>
+            </div>
+            <div class="tarjeta-servicio">
+                <div class="icono-servicio">3️⃣</div>
+                <h3>¡Recibí tu Flyer!</h3>
+                <p>Te entregamos tu diseño listo para usar o imprimir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario -->
+    <section id="contacto" class="seccion-contacto">
+        <h2 class="titulo-seccion">Hacer mi Pedido</h2>
+        <p class="subtitulo">Completa los datos y tu pedido se abrirá directamente en WhatsApp.</p>
+        
+        <form onsubmit="enviarAWhatsApp(event)" class="formulario-contacto">
+            <input type="text" id="w-nombre" placeholder="Tu Nombre Completo" required>
+            <input type="email" id="w-email" placeholder="Tu Correo Electrónico" required>
+            
+            <select id="w-categoria" required>
+                <option value="" disabled selected>Selecciona la categoría</option>
+                <option value="Fecha Especial">Flyer para Fecha Especial / Conmemorativa</option>
+                <option value="Cumpleaños">Invitación de Cumpleaños</option>
+                <option value="Evento / Fiesta">Flyer para Eventos / Fiestas</option>
+            </select>
+
+            <select id="w-plan" required onchange="actualizarTotal()">
+                <option value="" disabled selected>Selecciona tu plan</option>
+                <option value="Plan Básico ($4.000)" data-precio="4000">Plan Básico ($4.000)</option>
+                <option value="Plan Completo ($6.500)" data-precio="6500">Plan Completo ($6.500)</option>
+                <option value="Plan Premium ($11.000)" data-precio="11000">Plan Premium ($11.000)</option>
+            </select>
+
+            <!-- Extras Opcionales -->
+            <div class="bloque-extras">
+                <label class="titulo-pago">Extras opcionales (Opcional) ⚡</label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="extra-check" value="Urgente <12hs" data-precio="2000" onchange="actualizarTotal()">
+                    Entrega Urgente en menos de 12hs (+$2.000)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="extra-check" value="Archivo Editable" data-precio="3500" onchange="actualizarTotal()">
+                    Archivo Editable PSD/AI (+$3.500)
+                </label>
+            </div>
+
+            <!-- Precio Final Calculado -->
+            <div class="caja-total">
+                <span>Precio Final Estimado:</span>
+                <strong id="precio-total">$ 0</strong>
+            </div>
+
+            <select id="w-color" required>
+                <option value="" disabled selected>Gama de Colores Preferida</option>
+                <option value="Colores Pastel">Colores Pastel (Soft)</option>
+                <option value="Colores Neón">Colores Neón / Vibrantes</option>
+                <option value="Estética Dark">Estética Dark / Elegante</option>
+                <option value="Tonos Cálidos">Tonos Cálidos (Rojo, Naranja, Amarillo)</option>
+                <option value="Tonos Fríos">Tonos Fríos (Azul, Violeta, Verde)</option>
+                <option value="Personalizado">Tengo mi propia paleta / Marca</option>
+            </select>
+
+            <select id="w-formato" required>
+                <option value="" disabled selected>¿Dónde lo vas a usar?</option>
+                <option value="Historia (9:16)">Historia de Instagram / WhatsApp (Vertical)</option>
+                <option value="Feed (1:1)">Post de Feed (Cuadrado)</option>
+                <option value="Para Imprimir">Para Imprimir (Alta Definición)</option>
+                <option value="Múltiples Formatos">Múltiples formatos (Digital + Impresión)</option>
+            </select>
+
+            <textarea id="w-detalles" placeholder="Escribe aquí los detalles (textos del flyer, fecha, detalles del evento, etc.)..." rows="4" required></textarea>
+
+            <div class="bloque-pago">
+                <label class="titulo-pago">Medio de Pago Preferido 💳</label>
+                <select id="w-pago" onchange="mostrarOpcionPago()" required>
+                    <option value="" disabled selected>Elije una opción de pago</option>
+                    <option value="Transferencia Bancaria">Transferencia Bancaria (CBU / ALIAS)</option>
+                    <option value="Tarjeta de Crédito/Débito">Tarjeta de Crédito / Débito</option>
+                </select>
+
+                <div id="info-transferencia" class="detalles-pago" style="display: none;">
+                    <p class="datos-alias">📌 <strong>Datos para Transferir:</strong><br>
+                    <strong>Alias:</strong> TU.ALIAS.AQUI<br>
+                    <strong>CBU:</strong> 0000000000000000000000<br>
+                    <strong>Titular:</strong> Nombre / Estudio</p>
+                    <p class="lbl-comprobante" style="color:#0B3AF4;">💡 *Al enviar el pedido por WhatsApp podrás adjuntar el comprobante de pago.*</p>
+                </div>
+
+                <div id="info-tarjeta" class="detalles-pago" style="display: none;">
+                    <p class="nota-tarjeta">ℹ️ Te enviaremos el link de pago seguro por WhatsApp una vez confirmado el pedido.</p>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-formulario">Enviar Pedido por WhatsApp ✦</button>
+        </form>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5490000000000" class="btn-whatsapp" target="_blank">¡Chatea con nosotros 💬</a>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 FlyerStudio. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+    function abrirModal(srcImg, titulo) {
+        var modal = document.getElementById("modal-imagen");
+        var imgModal = document.getElementById("img-modal");
+        var caption = document.getElementById("caption-modal");
+        
+        modal.style.display = "flex";
+        imgModal.src = srcImg;
+        caption.innerText = titulo;
+    }
+
+    function cerrarModal() {
+        document.getElementById("modal-imagen").style.display = "none";
+    }
+
+    function seleccionarPlan(nombrePlan, precio) {
+        var select = document.getElementById("w-plan");
+        select.value = nombrePlan;
+        actualizarTotal();
+    }
+
+    function actualizarTotal() {
+        var selectPlan = document.getElementById("w-plan");
+        var basePrecio = 0;
+        
+        if (selectPlan.selectedIndex > 0) {
+            var selectedOption = selectPlan.options[selectPlan.selectedIndex];
+            basePrecio = parseInt(selectedOption.getAttribute("data-precio")) || 0;
+        }
+
+        var checkboxes = document.querySelectorAll('.extra-check:checked');
+        var totalExtras = 0;
+        checkboxes.forEach(function(box) {
+            totalExtras += parseInt(box.getAttribute("data-precio")) || 0;
+        });
+
+        var precioFinal = basePrecio + totalExtras;
+        document.getElementById("precio-total").innerText = "$ " + precioFinal.toLocaleString();
+    }
+
+    function mostrarOpcionPago() {
+        var seleccion = document.getElementById("w-pago").value;
+        var infoTransf = document.getElementById("info-transferencia");
+        var infoTarjeta = document.getElementById("info-tarjeta");
+
+        if (seleccion === "Transferencia Bancaria") {
+            infoTransf.style.display = "block";
+            infoTarjeta.style.display = "none";
+        } else {
+            infoTransf.style.display = "none";
+            infoTarjeta.style.display = "block";
+        }
+    }
+
+    function enviarAWhatsApp(event) {
+        event.preventDefault();
+
+        var nombre = document.getElementById("w-nombre").value;
+        var email = document.getElementById("w-email").value;
+        var categoria = document.getElementById("w-categoria").value;
+        var plan = document.getElementById("w-plan").value;
+        var color = document.getElementById("w-color").value;
+        var formato = document.getElementById("w-formato").value;
+        var detalles = document.getElementById("w-detalles").value;
+        var pago = document.getElementById("w-pago").value;
+        var total = document.getElementById("precio-total").innerText;
+
+        var extrasSeleccionados = [];
+        document.querySelectorAll('.extra-check:checked').forEach(function(box) {
+            extrasSeleccionados.push(box.value);
+        });
+        var textoExtras = extrasSeleccionados.length > 0 ? extrasSeleccionados.join(", ") : "Ninguno";
+
+        var mensaje = `¡Hola! Quiero encargar un diseño en *FlyerStudio* ✦\n\n` +
+                      `👤 *Nombre:* ${nombre}\n` +
+                      `📧 *Email:* ${email}\n` +
+                      `📌 *Categoría:* ${categoria}\n` +
+                      `📦 *Plan:* ${plan}\n` +
+                      `⚡ *Extras:* ${textoExtras}\n` +
+                      `💰 *Total Estimado:* ${total}\n` +
+                      `🎨 *Colores:* ${color}\n` +
+                      `📱 *Uso/Formato:* ${formato}\n` +
+                      `💳 *Medio de Pago:* ${pago}\n\n` +
+                      `📝 *Detalles/Textos:* \n${detalles}`;
+
+        var mensajeCodificado = encodeURIComponent(mensaje);
+        var tuNumeroWhatsApp = "5490000000000"; 
+
+        window.open("https://wa.me/" + tuNumeroWhatsApp + "?text=" + mensajeCodificado, "_blank");
+    }
+
+    function toggleTheme() {
+        var body = document.body;
+        var btn = document.getElementById("btn-theme");
+        if (body.classList.contains("light-mode")) {
+            body.classList.replace("light-mode", "dark-mode");
+            btn.innerText = "☀️";
+        } else {
+            body.classList.replace("dark-mode", "light-mode");
+            btn.innerText = "🌙";
+        }
+    }
+    </script>
+</body>
+</html>
